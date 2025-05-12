@@ -1,0 +1,114 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.form{
+  height: 40px;
+}  
+.typebox{
+width: 340px;
+height: 20px;
+padding: 2px 5px 2px 5px;
+border-radius: 5px ;
+margin: 2px;
+margin-left: 0;
+z-index: 1;
+
+}
+.sub-btn{
+  position: absolute;
+  height: 24px;
+  width: 45px;
+  background-color: rgb(255, 174, 188);
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  padding:2px;
+  margin-left: -49px;
+  margin-top: 4px;
+  cursor: pointer;
+  z-index: 0;
+}
+.todos{
+  display: flex;
+  align-items: center;
+  width: 340px;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 84);
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding: 2px 10px 2px 10px;
+  border: #61dafb 1px solid;
+  border-radius: 20px;
+}
+.checkbox{
+  display:flex;
+  align-items: center;
+  width: 250px;
+  justify-content: space-between;
+  height: auto;
+  cursor: pointer;
+}
+.content{
+  position: absolute;
+  text-align: left;
+  padding: 30px;
+  width: 200px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.crashline{
+  text-decoration: line-through;
+}
+.todos .icon{
+  cursor: pointer;
+}
+@media screen and (max-width:375px) {
+  .typebox{
+    width: 300px;
+  }
+  .sub-btn{
+    height: 25px;
+    margin-top: 3px;
+    margin-left: -48px;
+  }
+  .todos{
+    width: 300px;
+  }
+}
