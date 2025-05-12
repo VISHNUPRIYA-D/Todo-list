@@ -7,19 +7,19 @@ const Home = () => {
   const [todos, setTodos] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3100/get")
+      .get(`${process.env.REACT_APP_BACKEND_URL}/get`)
       .then((result) => setTodos(result.data))
       .catch((err) => console.log(err));
   }, []);
   const handleEdit = (id) => {
     axios
-      .put("http://localhost:3100/update/" + id)
+      .put(`${process.env.REACT_APP_BACKEND_URL}/update/${id}`)
       .then(() => window.location.reload())
       .catch((err) => console.log(err));
   };
   const handleDelete = (id)=>{
     axios
-      .delete("http://localhost:3100/delete/" + id)
+      .delete(`${process.env.REACT_APP_BACKEND_URL}/delete/${id}`)
       .then(() => window.location.reload())
       .catch((err) => console.log(err));
   }
